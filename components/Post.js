@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid'
+import { HeartIcon, ChatBubbleOvalLeftEllipsisIcon, PaperAirplaneIcon, BookmarkIcon, ChatBubbleOvalLeftIcon } from '@heroicons/react/24/outline'
+import { EllipsisHorizontalIcon, HeartIcon as HeartIconsolid } from '@heroicons/react/24/solid'
 import React from 'react'
 
 function Post({ id, username, img, caption, userImg }) {
@@ -14,6 +15,16 @@ function Post({ id, username, img, caption, userImg }) {
 
             {/* img */}
             <img src={img} className='object-cover w-full' alt='' />
+
+            {/* Buttons */}
+            <div className='flex justify-between px-4 pt-4'>
+                <div className='flex space-x-4'>
+                    <HeartIcon className='btn' />
+                    <ChatBubbleOvalLeftIcon className='btn' />
+                    <PaperAirplaneIcon className='btn -rotate-45' />
+                </div>
+                <BookmarkIcon className='btn' />
+            </div>
         </div>
     )
 }
