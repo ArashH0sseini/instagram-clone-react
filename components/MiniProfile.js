@@ -16,4 +16,4 @@ function MiniProfile() {
   )
 }
 
-export default MiniProfile
+export default MiniProfile;
