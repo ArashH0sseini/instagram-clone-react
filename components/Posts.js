@@ -7,14 +7,14 @@ const posts = [
         username: 'arash.h0sseini',
         userImg: 'https://links.papareact.com/3ke',
         img: 'https://links.papareact.com/3ke',
-        caption: 'this is a captopn'
+        caption: ' Watch my REACT BASICS 101 class for FREE with 1 month FREE Skillshare access (First 1000 people)'
     },
     {
         id: '123',
         username: 'arash.h0sseini',
         userImg: 'https://links.papareact.com/3ke',
         img: 'https://links.papareact.com/3ke',
-        caption: 'this is a captopn'
+        caption: ' Watch my REACT BASICS 101 class for FREE with 1 month FREE Skillshare access (First 1000 people)'
     },
 ]
 
