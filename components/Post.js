@@ -12,7 +12,8 @@ function Post({ id, username, img, caption, userImg }) {
                 <EllipsisHorizontalIcon className='h-7' />
             </div>
 
-            
+            {/* img */}
+            <img src={img} className='object-cover w-full' alt='' />
         </div>
     )
 }
