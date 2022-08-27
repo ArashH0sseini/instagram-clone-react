@@ -1,11 +1,13 @@
 import Image from 'next/image'
 import React from 'react'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline'
+import { GlobeEuropeAfricaIcon, HeartIcon, MagnifyingGlassIcon, PaperAirplaneIcon, PlusCircleIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { HomeIcon } from '@heroicons/react/24/solid'
+import avatar from '../assets/avatar.jpg'
 
 function Header() {
     return (
         <div>
-            <div className='flex justify-between max-w-6xl'>
+            <div className='flex justify-between max-w-6xl mx-5 lg:mx-auto'>
                 {/* Left */}
                 <div className='relative w-24 hidden lg:inline-grid cursor-pointer'>
                     <Image src="https://links.papareact.com/ocw" layout='fill'
@@ -29,6 +31,19 @@ function Header() {
                 </div>
 
                 {/* Right */}
+                <div className='flex items-center justify-end space-x-4'>
+                    <HomeIcon className='navBtn' />
+
+                    <div className='relative navBtn'>
+                    <PaperAirplaneIcon className='navBtn h-6 -rotate-45' />
+                    <div className='absolute -top-1 -right-1 text-xs w-5 h-5 bg-red-500 flex items-center justify-center rounded-full animate-pulse text-white'>3</div>
+                    </div>
+                    <PlusCircleIcon className='navBtn' />
+                    <GlobeEuropeAfricaIcon className='navBtn' />
+                    <HeartIcon className='navBtn' />
+                    
+                    <img src='https://links.papareact.com/3ke' alt="" className='h-8 rounded-full cursor-pointer' />
+                </div>
             </div>
         </div>
     )
