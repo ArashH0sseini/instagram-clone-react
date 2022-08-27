@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { HeartIcon, PaperAirplaneIcon, BookmarkIcon, ChatBubbleOvalLeftIcon } from '@heroicons/react/24/outline'
+import { HeartIcon, PaperAirplaneIcon, BookmarkIcon, ChatBubbleOvalLeftIcon, FaceSmileIcon } from '@heroicons/react/24/outline'
 import { EllipsisHorizontalIcon, HeartIcon as HeartIconsolid } from '@heroicons/react/24/solid'
 import React from 'react'
 
@@ -33,6 +33,15 @@ function Post({ id, username, img, caption, userImg }) {
                     {caption}
                 </p>
             </div>
+
+            {/* input box */}
+            <form className='flex items-center p-4'>
+                <FaceSmileIcon className='h-7' />
+                <input type="text"
+                placeholder='Add a comment...'
+                 className='border-none flex-1 focus:ring-0 outline-none' />
+                <button className='font-semibold text-blue-400'>Post</button>
+            </form>
         </div>
     )
 }
