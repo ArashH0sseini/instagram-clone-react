@@ -33,7 +33,7 @@ function Header() {
 
                 {/* Right */}
                 <div className='flex items-center justify-end space-x-4'>
-                    <HomeIcon className='navBtn' />
+                    <HomeIcon className='navBtn inline-flex' />
 
                     {session ? (
                         <>
@@ -45,7 +45,7 @@ function Header() {
                             <GlobeEuropeAfricaIcon className='navBtn' />
                             <HeartIcon className='navBtn' />
 
-                            <img onClick={signOut} src="https://links.papareact.com/jjm" alt="" 
+                            <img onClick={signOut} src={session.user.image}  alt="" 
                             className='h-8 w-8 rounded-full cursor-pointer' /></>
                     ) : (
                         <>
@@ -59,4 +59,4 @@ function Header() {
     )
 }
 
-export default Header
+export default Header;
