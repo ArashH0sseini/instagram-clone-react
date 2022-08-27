@@ -22,9 +22,11 @@ function Posts() {
     return (
         <div>
             {posts.map(post => (
-                <Post key={post.id}
+                <Post
+                    key={post.id}
                     id={post.id}
                     username={post.username}
+                    userImg={post.userImg}
                     img={post.img}
                     caption={post.caption} />
             ))}
