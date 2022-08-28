@@ -1,37 +1,35 @@
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { useSession } from 'next-auth/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { db } from '../firebase';
 import Post from './Post'
 
-
-
 function Posts() {
+    const [posts, setPosts] = useState([]);
+
+    useEffect(() =>
+        onSnapshot(
+            query(collection(db, 'posts'), orderBy('timestamp', 'desc')),
+            (snapshot) => {
+                setPosts(snapshot.docs);
+            }
+        ),
+        [db]
+    );
+
+
     const { data: session } = useSession()
-    const posts = [
-        {
-            id: '123',
-            username: 'arash.h0sseini',
-            userImg: `${session?.user?.image}`,
-            img: 'https://links.papareact.com/3ke',
-            caption: ' Watch my REACT BASICS 101 class for FREE with 1 month FREE Skillshare access (First 1000 people)'
-        },
-        {
-            id: '321',
-            username: 'arash.h0sseini',
-            userImg: `${session?.user?.image}`,
-            img: 'https://links.papareact.com/3ke',
-            caption: ' Watch my REACT BASICS 101 class for FREE with 1 month FREE Skillshare access (First 1000 people)'
-        },
-    ]
+    
     return (
         <div>
-            {posts.map(post => (
+            {posts.map((post) => (
                 <Post
                     key={post.id}
                     id={post.id}
-                    username={post.username}
-                    userImg={post.userImg}
-                    img={post.img}
-                    caption={post.caption} />
+                    username={post.data().username}
+                    userImg={post.data().profileImg}
+                    img={post.data().image}
+                    caption={post.data().caption} />
             ))}
 
         </div>
