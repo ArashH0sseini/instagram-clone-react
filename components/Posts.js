@@ -15,7 +15,7 @@ function Posts() {
             caption: ' Watch my REACT BASICS 101 class for FREE with 1 month FREE Skillshare access (First 1000 people)'
         },
         {
-            id: '123',
+            id: '321',
             username: 'arash.h0sseini',
             userImg: `${session?.user?.image}`,
             img: 'https://links.papareact.com/3ke',
