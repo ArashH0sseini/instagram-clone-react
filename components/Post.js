@@ -8,7 +8,7 @@ function Post({ id, username, img, caption, userImg }) {
         <div className='bg-white my-7 border rounded-sm'>
             {/* header */}
             <div className='flex items-center p-5'>
-                <img src={img} className="rounded-full h-12 w-12 object-contain border p-1 mr-3" alt='' />
+                <img src={userImg} className="rounded-full h-12 w-12 object-contain border p-1 mr-3" alt='' />
                 <p className='flex-1  font-bold'>{username}</p>
                 <EllipsisHorizontalIcon className='h-7' />
             </div>
