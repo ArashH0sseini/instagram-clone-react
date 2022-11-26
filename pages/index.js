@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Instagram</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/fav.ico" />
       </Head>
 
       <Modal />
